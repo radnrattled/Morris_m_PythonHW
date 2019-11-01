@@ -15,10 +15,22 @@ while player is False:
 	elif player == "quit":
 		print("Youre a quitter")
 		exit()
-	else:
-		print('NOT a tie, check other conditions')
-		if player == "Rock":
-			print("check to see what the computer is and win or lose")
+
+	elif player == "rock":
+		if computer == "paper":
+			print("You LOSE", computer,"covers", player,"\n")
+		else:
+			print("YOU WON", player, "smashes", computer, "\n")
+	elif player == "paper":
+		if computer == "scissors":
+			print("You LOSE", computer,"cuts", player,"\n")
+		else:
+			print("YOU WON", player, "covers", computer, "\n")
+	elif player == "scissors":
+		if computer == "rock":
+			print("You LOSE", computer,"smashes", player,"\n")
+		else:
+			print("YOU WON", player, "cuts", computer, "\n")
 
 	player = False
 	computer=weapons[randint(0,2)]
